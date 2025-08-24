@@ -1,10 +1,7 @@
 +++
 title = "Arango Orderbook"
-type = "chapter"
 weight = 1
 +++
-
-# arango-orderbook
 
 A consumer microservice in the **StreamForge** ecosystem, designed for persisting order book data in ArangoDB.
 

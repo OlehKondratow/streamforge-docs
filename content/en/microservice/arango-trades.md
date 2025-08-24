@@ -1,10 +1,7 @@
 +++
 title = "Arango Trades"
-type = "chapter"
 weight = 1
 +++
-
-# arango-trades
 
 A consumer microservice in the **StreamForge** ecosystem, designed for persisting trade data in ArangoDB.
 

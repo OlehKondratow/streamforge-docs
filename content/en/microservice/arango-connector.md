@@ -1,10 +1,7 @@
 +++
 title = "Arango Connector"
-type = "chapter"
 weight = 1
 +++
-
-# Arango-connector
 
 A consumer microservice in the **StreamForge** ecosystem, designed for universal data persistence into ArangoDB.
 

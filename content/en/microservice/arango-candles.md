@@ -1,10 +1,7 @@
 +++
 title = "Arango Candles"
-type = "chapter"
 weight = 1
 +++
-
-# arango-candles
 
 A consumer microservice in the **StreamForge** ecosystem.
 

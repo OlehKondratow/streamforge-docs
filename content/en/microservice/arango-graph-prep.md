@@ -1,10 +1,7 @@
 +++
 title = "Arango Graph Prep"
-type = "chapter"
 weight = 1
 +++
-
-# arango-graph-prep
 
 A microservice in the **StreamForge** ecosystem, designed for preparing data for graph construction and storing it in ArangoDB.
 
