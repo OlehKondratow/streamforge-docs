@@ -1,4 +1,4 @@
-baseURL = 'https://olehkondratow.github.io/streamforge-docs/'
+baseURL = 'http://127.0.0.1:1313/'
 languageCode = 'en-us'
 title = 'StreamForge Docs'
 defaultContentLanguage = "en"
@@ -99,45 +99,3 @@ enableRobotsTXT = true
     type = 'custom'
     [[params.sidebarheadermenus.elements]]
       type = 'versionswitcher'        # селектор версии
-
-  # полностью очищаем подвал сайдбара
-  sidebarfootermenus = []
-
-  # шапка сайдбара
-  [[params.sidebarheadermenus]]
-    type = 'custom'
-    [[params.sidebarheadermenus.elements]]
-      icon = 'globe'          # опционально: иконка Font Awesome
-      type = 'languageswitcher'
-    [[params.sidebarheadermenus.elements]]
-      type = 'historyclearer' # кнопка Clear History
-  [[params.sidebarheadermenus]]
-    type = 'divider'
-
-  # основная часть сайдбара
-  [[params.sidebarmenus]]
-    type = 'page'
-
-####
-
-# # Docs section configuration (used by Lotus Docs)
-# [params.docs]
-#   pathName = "docs"    # base section for documentation
-#   darkMode = true      # enable dark mode
-# 
-# # Built-in FlexSearch in Lotus Docs
-# [params.flexsearch]
-#   enabled = true
-#   indexSections = ["docs"]
-# 
-# # Optional: menus (Lotus Docs recognizes section menus)
-# [menu]
-#   [[menu.main]]
-#     name = "Docs"
-#     url  = "/docs/"
-#     weight = 1
-# 
-#   [[menu.main]]
-#     name = "Search"
-#     url  = "/search/"
-#     weight = 2
