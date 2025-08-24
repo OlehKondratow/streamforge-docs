@@ -1,0 +1,229 @@
+/* === ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ТЕМЫ RELEARN === */
+:root{
+ /* ширина — без изменений */
+  --MAIN-WIDTH-MAX: 1000rem;
+
+  /* базовая гарнитура + моно */
+  --MAIN-font: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --MAIN-font-weight: 400;
+  --MAIN-BOLD-font-weight: 700;
+  --MENU-WIDTH-L: 22rem;
+  --CODE-font: "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* заголовки наследуют основной шрифт */
+  --MAIN-TITLES-font: var(--MAIN-font);
+
+  /* Параметры теней для заголовков (можно «крутить» централизованно) */
+  --H-TS-L1: 0 1px 0 rgba(0,0,0,.40);
+  --H-TS-L2: 0 3px 6px rgba(0,0,0,.24);
+  --H-TS-D1: 0 1px 0 rgba(0,0,0,.35);
+  --H-TS-D2: 0 2px 6px rgba(0,0,0,.28);
+}
+
+/* === БАЗОВАЯ ТИПОГРАФИКА КОНТЕНТА === */
+#R-body-inner, #body #body-inner {
+  font-size: clamp(0.96rem, 0.92rem + 0.3vw, 1.00rem);
+  line-height: 1.6;
+}
+
+/* Заголовки — плавная шкала, компактные отступы */
+#R-body-inner h1, #body #body-inner h1 {
+  font-size: clamp(1.45rem, 1.10rem + 1.2vw, 1.70rem) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 .70rem 0 !important;
+}
+#R-body-inner h2, #body #body-inner h2 {
+  font-size: clamp(1.22rem, 1.00rem + .6vw, 1.28rem) !important;
+  margin-top: 1.10rem;
+}
+#R-body-inner h3, #body #body-inner h3 {
+  font-size: clamp(1.08rem, .96rem + .4vw, 1.12rem) !important;
+  margin-top: 0.90rem;
+}
+
+/* === ТЕНИ ДЛЯ ЗАГОЛОВКОВ H1–H3 === */
+/* Светлые варианты (relearn-light/bright, zen-light, learn) — мягкие тени */
+html[data-variant="relearn-light"] #R-body-inner h1,
+html[data-variant="relearn-light"] #R-body-inner h2,
+html[data-variant="relearn-light"] #R-body-inner h3,
+html[data-variant="relearn-bright"] #R-body-inner h1,
+html[data-variant="relearn-bright"] #R-body-inner h2,
+html[data-variant="relearn-bright"] #R-body-inner h3,
+html[data-variant="zen-light"] #R-body-inner h1,
+html[data-variant="zen-light"] #R-body-inner h2,
+html[data-variant="zen-light"] #R-body-inner h3,
+html[data-variant="learn"] #R-body-inner h1,
+html[data-variant="learn"] #R-body-inner h2,
+html[data-variant="learn"] #R-body-inner h3 {
+  text-shadow: var(--H-TS-L1), var(--H-TS-L2);
+}
+
+/* Тёмные варианты (relearn-dark, zen-dark, neon) — чуть сильнее */
+html[data-variant="relearn-dark"] #R-body-inner h1,
+html[data-variant="relearn-dark"] #R-body-inner h2,
+html[data-variant="relearn-dark"] #R-body-inner h3,
+html[data-variant="zen-dark"] #R-body-inner h1,
+html[data-variant="zen-dark"] #R-body-inner h2,
+html[data-variant="zen-dark"] #R-body-inner h3,
+html[data-variant="neon"] #R-body-inner h1,
+html[data-variant="neon"] #R-body-inner h2,
+html[data-variant="neon"] #R-body-inner h3 {
+  text-shadow: var(--H-TS-D1), var(--H-TS-D2);
+}
+
+/* На узких экранах и при печати тени отключаем (повышение читабельности) */
+@media (max-width: 480px), print{
+  #R-body-inner h1, #body #body-inner h1,
+  #R-body-inner h2, #body #body-inner h2,
+  #R-body-inner h3, #body #body-inner h3{
+    text-shadow: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root{ --MAIN-font-weight: 420; }
+}
+
+@media (min-width: 1024px){
+
+  /* 1) Самый надёжный — адресуемся к footer’у сайдбара */
+  #R-sidebar-footer summary,
+  #R-sidebar-footer a,
+  #R-sidebar-footer button,
+  #R-sidebar-footer i {
+    font-size: 1.60rem !important;  /* ~в 2 раза больше стандартных ~0.8–0.9rem */
+    line-height: 1.25 !important;
+  }
+  #R-sidebar-footer summary { padding: .35rem .50rem !important; }
+  #R-sidebar-footer a       { padding: .25rem .50rem !important; display: block; }
+
+  /* 2) Если у вашей версии разметка без #R-sidebar-footer — охватываем альтернативы */
+  .sidebarfooter summary,
+  .sidebarfooter a,
+  .sidebarfooter button,
+  .sidebarfooter i,
+  #sidebar .languageswitcher summary,
+  #sidebar .variantswitcher summary,
+  #sidebar .languageswitcher a,
+  #sidebar .variantswitcher a,
+  #sidebar .languageswitcher button,
+  #sidebar .variantswitcher button,
+  #sidebar .languageswitcher i,
+  #sidebar .variantswitcher i {
+    font-size: 1.60rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* 3) Чуть больше «щелчковая» зона */
+  #R-sidebar-footer .languageswitcher,
+  #R-sidebar-footer .variantswitcher,
+  .sidebarfooter .languageswitcher,
+  .sidebarfooter .variantswitcher {
+    /* не трогаем наследование размера; только внутренние отступы */
+    padding: .10rem 0;
+  }
+}
+
+
+/* Абзацы и списки */
+#R-body-inner p { margin: 0 0 .75rem 0; }
+#R-body-inner ul, #R-body-inner ol { margin: .5rem 0 .9rem 1.25rem; }
+
+/* Код и блоки кода */
+#R-body-inner code { font-size: 0.92em; }
+#R-body-inner pre { white-space: pre-wrap; word-break: break-word; }
+#R-body-inner pre code { font-size: 0.90em; }
+
+/* Таблицы */
+#R-body-inner table { font-size: 0.95rem; }
+
+/* Byline под H1 (если используете) */
+.sf-byline{
+  margin:.25rem 0 1rem;
+  font-size:.95rem;
+  opacity:.8;
+}
+.sf-byline a{ text-decoration:none; }
+.sf-byline a:hover{ text-decoration:underline; }
+
+/* === ИКОНКИ В ПРАВОЙ ЧАСТИ ТОПБАРА === */
+#R-topbar .btn-github i, #R-topbar .btn-linkedin i,
+.topbar   .btn-github i, .topbar   .btn-linkedin i {
+  font-size: 1.85rem;
+  line-height: 1;
+}
+#R-topbar .btn-github, #R-topbar .btn-linkedin,
+.topbar   .btn-github, .topbar   .btn-linkedin {
+  padding: 0 .50rem;
+}
+
+/* Небольшая адаптация на узких экранах */
+@media (max-width: 1023px){
+  #R-body-inner h1, #body #body-inner h1 {
+    margin-bottom: .60rem !important;
+  }
+  #R-body-inner h2, #body #body-inner h2 { margin-top: 1.0rem; }
+  #R-body-inner h3, #body #body-inner h3 { margin-top: 0.85rem; }
+}
+
+/* 1) Никогда не прокручиваем заголовки — тень/высота не должны давать скролл */
+#R-body-inner h1, #R-body-inner h2, #R-body-inner h3,
+#body #body-inner h1, #body #body-inner h2, #body #body-inner h3{
+  overflow: visible !important;   /* ключевая строка */
+  max-width: 100%;
+}
+
+/* 2) Чутка “воздуха” для H1, если межстрочка слишком плотная */
+#R-body-inner h1, #body #body-inner h1{
+  line-height: 1.28 !important;   /* было 1.25 — можно оставить, если всё ок */
+}
+
+/* 3) На всякий случай глушим горизонтальный скролл у контента
+      (не касается кода, т.к. у вас pre уже с переносами) */
+#R-body, #R-body-inner, #body, #body-inner{
+  overflow-x: clip;     /* или hidden, если clip недоступен в старом браузере */
+}
+
+/* =========================
+   Sidebar: увеличить ×2 переключатели темы и языка (десктоп)
+   Причина: тема задаёт элементы в rem → масштабируем сами элементы.
+   ========================= */
+@media (min-width: 1024px){
+
+  /* 1) Самый надёжный — адресуемся к footer’у сайдбара */
+  #R-sidebar-footer summary,
+  #R-sidebar-footer a,
+  #R-sidebar-footer button,
+  #R-sidebar-footer i {
+    font-size: 3.2rem !important;  /* ~в 2 раза больше стандартных ~0.8–0.9rem */
+    line-height: 2.5 !important;
+  }
+  #R-sidebar-footer summary { padding: .35rem .50rem !important; }
+  #R-sidebar-footer a       { padding: .25rem .50rem !important; display: block; }
+
+  /* 2) Если у вашей версии разметка без #R-sidebar-footer — охватываем альтернативы */
+  .sidebarfooter summary,
+  .sidebarfooter a,
+  .sidebarfooter button,
+  .sidebarfooter i,
+  #sidebar .languageswitcher summary,
+  #sidebar .variantswitcher summary,
+  #sidebar .languageswitcher a,
+  #sidebar .variantswitcher a,
+  #sidebar .languageswitcher button,
+  #sidebar .variantswitcher button,
+  #sidebar .languageswitcher i,
+  #sidebar .variantswitcher i {
+    font-size: 3.20rem !important;
+    line-height: 2.50 !important;
+  }
+
+  /* 3) Чуть больше «щелчковая» зона */
+  #R-sidebar-footer .languageswitcher,
+  #R-sidebar-footer .variantswitcher,
+  .sidebarfooter .languageswitcher,
+  .sidebarfooter .variantswitcher {
+    /* не трогаем наследование размера; только внутренние отступы */
+    padding: .10rem 0;
+  }
+}

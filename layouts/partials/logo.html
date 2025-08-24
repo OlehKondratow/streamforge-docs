@@ -1,0 +1,8 @@
+<a id="R-logo"
+   href="{{ partial "permalink.gotmpl" (dict "to" .Site.Home) }}"
+   aria-label="{{ .Site.Title }}">
+  <img id="sf-logo"
+       alt="Stream Forge logo"
+       src="{{ with resources.Get "images/sf-light.png" }}{{ .RelPermalink }}{{ else }}{{ "images/sf-light.png" | relURL }}{{ end }}">
+</a>
+

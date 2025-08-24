@@ -1,0 +1,163 @@
+{{- $assetBusting := partialCached "assetbusting.gotmpl" . -}}
+{{- $css := "css/custom.css" -}}
+
+{{- with (resources.Get $css) -}}
+  <link href="{{ .RelPermalink }}{{ $assetBusting }}" rel="stylesheet">
+{{- else -}}
+  {{- if fileExists (printf "/static/%s" $css) -}}
+    <link href="{{ $css | relURL }}{{ $assetBusting }}" rel="stylesheet">
+  {{- end -}}
+{{- end -}}
+
+<!-- При необходимости веб-шрифты подключайте здесь:
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+-->
+
+<script>
+(function(){
+  // ----- ЯВНЫЕ соответствия (прописаны в коде) -----
+  // Варианты, где нужен СВЕТЛЫЙ логотип:
+  var LIGHT = new Set(["relearn-bright","zen-dark"]);
+  // Варианты, где нужен ТЁМНЫЙ логотип:
+  var DARK  = new Set(["relearn-light","relearn-dark","learn","neon","zen-light"]);
+  // Эвристика: считать «тёмным», если имя оканчивается на -dark или в списке:
+  var DARK_NAMES = new Set(["neon"]);
+  var DARK_SUFFIX = /-dark$/;
+
+  // Пути к логотипам (assets -> Pipes; иначе -> static)
+  var lightSrc = "{{ with resources.Get "images/sf-light.png" }}{{ .RelPermalink }}{{ else }}{{ "images/sf-light.png" | relURL }}{{ end }}";
+  var darkSrc  = "{{ with resources.Get "images/sf-dark.png"  }}{{ .RelPermalink }}{{ else }}{{ "images/sf-dark.png"  | relURL }}{{ end }}";
+
+  function currentVariant(){
+    var v = document.documentElement.getAttribute('data-variant');
+    if (v) return v;
+    var links = document.querySelectorAll('link[rel="stylesheet"][href*="theme-"]');
+    for (var i=0;i<links.length;i++){
+      var href = links[i].getAttribute('href') || "";
+      var m = href.match(/theme-([a-z0-9-]+)\.css/i);
+      if (m) return m[1];
+    }
+    return "";
+  }
+
+  function decideDark(variant){
+    if (!variant) return false;
+    if (LIGHT.has(variant)) return false;   // явный приоритет: светлый
+    if (DARK.has(variant))  return true;    // затем: тёмный
+    if (DARK_SUFFIX.test(variant) || DARK_NAMES.has(variant)) return true;
+    return false;
+  }
+
+  function applyLogo(variant){
+    var img = document.getElementById('sf-logo');
+    if (!img) return;
+    img.src = decideDark(variant) ? darkSrc : lightSrc;
+  }
+
+  function init(){ applyLogo(currentVariant()); }
+  if (document.readyState === "loading") { document.addEventListener('DOMContentLoaded', init); }
+  else { init(); }
+
+  document.addEventListener('themeVariantLoaded', function(e){
+    applyLogo((e && e.detail && e.detail.variant) || currentVariant());
+  });
+  document.addEventListener('variantLoaded', function(e){
+    applyLogo((e && e.detail && e.detail.variant) || currentVariant());
+  });
+
+  if ('MutationObserver' in window){
+    new MutationObserver(function(muts){
+      for (var i=0;i<muts.length;i++){
+        if (muts[i].type === 'attributes' && muts[i].attributeName === 'data-variant'){
+          applyLogo(currentVariant()); break;
+        }
+      }
+    }).observe(document.documentElement, {attributes:true, attributeFilter:['data-variant']});
+  }
+})();
+</script>
+
+<script>
+/* ===== Byline под H1: автор/почта/дата (безопасно + с фоллбэками) ===== */
+(function(){
+  /* ---------- 1) Сбор данных на стороне Hugo — БЕЗОПАСНО ---------- */
+  {{- /* Безопасно читаем .Site.Params.author.{name,email}, если задано */ -}}
+  {{- $author := index .Site.Params "author" -}}
+  {{- $defName := "" -}}
+  {{- $defEmail := "" -}}
+  {{- with $author }}{{ with index . "name" }}{{ $defName = . }}{{ end }}{{ with index . "email" }}{{ $defEmail = . }}{{ end }}{{ end }}
+
+  {{- $name := or .Params.LastModifierDisplayName $defName "" -}}
+  {{- $mail := or .Params.LastModifierEmail       $defEmail "" -}}
+
+  {{- $date := "" -}}
+  {{- with .GitInfo -}}
+    {{- $date = time.Format "2006-01-02" .AuthorDate -}}
+  {{- else -}}
+    {{- with .Lastmod -}}{{- $date = time.Format "2006-01-02" . -}}{{- end -}}
+    {{- if not $date -}}{{- with .PublishDate -}}{{- $date = time.Format "2006-01-02" . -}}{{- end -}}{{- end -}}
+    {{- if not $date -}}{{- with .Date -}}{{- $date = time.Format "2006-01-02" . -}}{{- end -}}{{- end -}}
+  {{- end -}}
+
+  const BY = {{ dict "name" $name "email" $mail "date" $date | jsonify }};
+  console.log("[BYLINE] data =", BY);
+
+  /* ---------- 2) Поиск контейнера и заголовка ---------- */
+  function findRoot(){
+    return document.querySelector('#R-body-inner')
+        || document.querySelector('#body-inner')
+        || document.querySelector('#body #body-inner')
+        || document.querySelector('#R-body')
+        || document.querySelector('main')
+        || document.querySelector('article')
+        || document.body;
+  }
+  function findH1(root){
+    if (!root) return null;
+    let h = root.querySelector('h1');
+    if (h) return h;
+    h = root.querySelector('.titlepage h1, .chapter > h1, article h1, .content h1, header h1');
+    if (h) return h;
+    return document.querySelector('h1');
+  }
+
+  /* ---------- 3) Вставка или обновление byline ---------- */
+  function renderByline(){
+    const parts = [];
+    if (BY.name)  parts.push(BY.name);
+    if (BY.email) parts.push('<a href="mailto:'+encodeURIComponent(BY.email)+'">'+BY.email+'</a>');
+    if (BY.date)  parts.push(BY.date);
+    if (!parts.length) { console.log("[BYLINE] nothing to render"); return; }
+
+    const root = findRoot();
+    const h1 = findH1(root);
+    console.log("[BYLINE] root =", root, "h1 =", h1);
+
+    const html = parts.join(' · ');
+
+    // Если byline уже стоит прямо под H1 — обновим и выйдем
+    if (h1 && h1.nextElementSibling && h1.nextElementSibling.classList && h1.nextElementSibling.classList.contains('sf-byline')){
+      h1.nextElementSibling.innerHTML = html;
+      return;
+    }
+
+    // Создадим/вставим
+    const div = document.createElement('div');
+    div.className = 'sf-byline';
+    div.innerHTML = html;
+
+    if (h1) {
+      h1.insertAdjacentElement('afterend', div);        // основной сценарий — под заголовок
+    } else if (root) {
+      root.prepend(div);                                 // фоллбэк — в начало контента
+    } else {
+      document.body.insertAdjacentElement('afterbegin', div); // крайний случай
+    }
+  }
+
+  // Инициализация
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', renderByline); }
+  else { renderByline(); }
+})();
+</script>
+

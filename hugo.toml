@@ -1,0 +1,125 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'StreamForge Docs'
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableGitInfo = true
+enableEmoji = true
+enableRobotsTXT = true
+
+
+[module]
+
+  [[module.imports]]
+    path = "github.com/McShelby/hugo-theme-relearn"
+
+  [[module.imports]]
+    path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+
+
+[params]
+
+  [params.branding]
+    logoLight = "images/sf-light.png"
+    logoDark  = "images/sf-dark.png"
+
+  # Варианты, для которых ИСПОЛЬЗУЕМ светлый логотип:
+  lightVariants = ["zen-light", "zen-dark"]
+
+  # Варианты, для которых ИСПОЛЬЗУЕМ тёмный логотип:
+  darkVariants = ["relearn-light", "relearn-dark", "relearn-bright", "learn", "neon"]
+
+  # ----- Варианты цветовых тем -----
+  [[params.themeVariant]]
+    identifier = "relearn-light"
+
+  [[params.themeVariant]]
+    identifier = "relearn-dark"
+
+  [[params.themeVariant]]
+    identifier = "relearn-bright"
+
+  [[params.themeVariant]]
+    identifier = "zen-light"
+
+  [[params.themeVariant]]
+    identifier = "zen-dark"
+
+  [[params.themeVariant]]
+    identifier = "neon"
+
+  [[params.themeVariant]]
+    identifier = "learn"
+
+  [params.social]
+    github  = "https://github.com/OlehKondratow"
+    linkedin = "https://www.linkedin.com/in/olehkondratow/"
+
+  [params.author]
+    name  = "Oleh Kondratow"
+    email = "box@okondratov.pl"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "My Documentation"
+    contentDir = "content/en"
+
+  [languages.pl]
+    languageName = "Polski"
+    weight = 2
+    title = "Moja Dokumentacja"
+    contentDir = "content/pl"
+
+  [languages.ru]
+    languageName = "Русский"
+    weight = 3
+    title = "Моя Документация"
+    contentDir = "content/ru"
+
+  # Показать «галочки» посещённых страниц + кнопку «Clear History»
+  showVisitedLinks = true
+
+  # Футер сайдбара: история, переключатель темы, языков
+  [[params.sidebarfootermenus]]
+    identifier = 'footercontrols'
+    type = 'custom'
+    [[params.sidebarfootermenus.elements]]
+      type = 'historyclearer'         # кнопка очистки истории
+    [[params.sidebarfootermenus.elements]]
+      type = 'variantswitcher'        # селектор цветовой темы
+      # icon = 'palette'              # при желании переопределить иконку
+    [[params.sidebarfootermenus.elements]]
+      type = 'languageswitcher'       # селектор языка
+
+  # Хедер сайдбара: переключатель версий (если настроено versioning)
+  [[params.sidebarheadermenus]]
+    identifier = 'headercontrols'
+    type = 'custom'
+    [[params.sidebarheadermenus.elements]]
+      type = 'versionswitcher'        # селектор версии
+
+####
+
+# # Docs section configuration (used by Lotus Docs)
+# [params.docs]
+#   pathName = "docs"    # base section for documentation
+#   darkMode = true      # enable dark mode
+# 
+# # Built-in FlexSearch in Lotus Docs
+# [params.flexsearch]
+#   enabled = true
+#   indexSections = ["docs"]
+# 
+# # Optional: menus (Lotus Docs recognizes section menus)
+# [menu]
+#   [[menu.main]]
+#     name = "Docs"
+#     url  = "/docs/"
+#     weight = 1
+# 
+#   [[menu.main]]
+#     name = "Search"
+#     url  = "/search/"
+#     weight = 2
