@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://olehkondratow.github.io/streamforge-docs/'
 languageCode = 'en-us'
 title = 'StreamForge Docs'
 defaultContentLanguage = "en"
@@ -117,7 +117,7 @@ enableRobotsTXT = true
   # основная часть сайдбара
   [[params.sidebarmenus]]
     type = 'page'
-    
+
 ####
 
 # # Docs section configuration (used by Lotus Docs)
