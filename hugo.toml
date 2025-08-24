@@ -100,6 +100,24 @@ enableRobotsTXT = true
     [[params.sidebarheadermenus.elements]]
       type = 'versionswitcher'        # селектор версии
 
+  # полностью очищаем подвал сайдбара
+  sidebarfootermenus = []
+
+  # шапка сайдбара
+  [[params.sidebarheadermenus]]
+    type = 'custom'
+    [[params.sidebarheadermenus.elements]]
+      icon = 'globe'          # опционально: иконка Font Awesome
+      type = 'languageswitcher'
+    [[params.sidebarheadermenus.elements]]
+      type = 'historyclearer' # кнопка Clear History
+  [[params.sidebarheadermenus]]
+    type = 'divider'
+
+  # основная часть сайдбара
+  [[params.sidebarmenus]]
+    type = 'page'
+    
 ####
 
 # # Docs section configuration (used by Lotus Docs)
