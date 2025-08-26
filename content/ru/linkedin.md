@@ -1,7 +1,7 @@
 +++
 date = '2025-08-26T01:30:31+02:00'
 draft = false
-title = "LinkedIN"
+title = "linkedin"
 weight = 89
 +++
 
