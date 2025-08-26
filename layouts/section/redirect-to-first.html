@@ -1,0 +1,13 @@
+{{/* layouts/section/redirect-to-first.html */}}
+{{ define "main" }}
+  {{ $pages := .RegularPagesRecursive.ByWeight }}
+  {{ if gt (len $pages) 0 }}
+    {{ $p := index $pages 0 }}
+    <meta http-equiv="refresh" content="0; url={{ $p.RelPermalink }}">
+    <meta name="robots" content="noindex,follow">
+    <link rel="canonical" href="{{ $p.RelPermalink }}">
+    <noscript><p><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></p></noscript>
+  {{ else }}
+    <p>No child pages in this section.</p>
+  {{ end }}
+{{ end }}

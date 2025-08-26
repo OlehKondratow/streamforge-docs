@@ -7,7 +7,6 @@ enableGitInfo = true
 enableEmoji = true
 enableRobotsTXT = true
 
-
 [module]
 
   [[module.imports]]
@@ -16,8 +15,19 @@ enableRobotsTXT = true
   [[module.imports]]
     path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
-
 [params]
+ ordersectionsby = "weight" 
+ showVisitedLinks = true
+ disableLandingPageButton = false
+ disableNextPrev = false
+
+# Текст/иконка Home для каждого языка (можно задать глобально в [params], но лучше языка-специфично)
+[languages.en.params]
+  landingPageName = '<i class="fa-fw fas fa-home"></i> Home'
+[languages.ru.params]
+  landingPageName = '<i class="fa-fw fas fa-home"></i> Домой'
+[languages.pl.params]
+  landingPageName = '<i class="fa-fw fas fa-home"></i> Start'
 
   [params.branding]
     logoLight = "images/sf-light.png"
@@ -77,9 +87,6 @@ enableRobotsTXT = true
     weight = 3
     title = "Моя Документация"
     contentDir = "content/ru"
-
-  # Показать «галочки» посещённых страниц + кнопку «Clear History»
-  showVisitedLinks = true
 
   # Футер сайдбара: история, переключатель темы, языков
   [[params.sidebarfootermenus]]

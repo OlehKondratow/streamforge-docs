@@ -12,7 +12,7 @@ gitlab-runner register  --url https://gitlab.dmz.home  --token glrt-**
               gitlab-runner run --working-directory /home/kinga --config /home/gitlab-runner/config.toml
 
 cat /etc/gitlab-runner/config.toml
-
+```toml
 concurrent = 1
 check_interval = 0
 connection_max_age = "15m0s"
@@ -61,5 +61,5 @@ shutdown_timeout = 0
     [runners.cache.s3]
     [runners.cache.gcs]
     [runners.cache.azure]
-
+```
 ================================

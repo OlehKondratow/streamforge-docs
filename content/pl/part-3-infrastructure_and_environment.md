@@ -1,6 +1,6 @@
 +++
 date = '2025-08-24T20:23:59+02:00'
-draft = true
+draft = false
 title = 'Infrastruktura i środowisko'
 weight = 3
 +++

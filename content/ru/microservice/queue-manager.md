@@ -1,25 +1,25 @@
 +++
-title = "Queue Manager"
+title = "Менеджер очередей"
 type = "chapter"
 weight = 1
 +++
 
-# \[Package] StreamForge Queue Manager
+# \[Пакет] StreamForge Queue Manager
 
-Management microservice for launching, stopping, and monitoring data processing queues in StreamForge.
+Микросервис управления для запуска, остановки и мониторинга очередей обработки данных в StreamForge.
 
-## \[Features]
+## \[Возможности]
 
-* Launching Kubernetes Jobs: `loader-producer`, `arango-connector`, `gnn-trainer`, `visualizer`, `graph-builder`
-* Parameterized execution via Swagger
-* Queue management by `queue_id`
-* Command support via Kafka (`queue-control`, `queue-events`)
-* Prometheus metrics support
-* Built-in health endpoints `/health/live`, `/health/ready`, `/health/startup`
+* Запуск заданий Kubernetes: `loader-producer`, `arango-connector`, `gnn-trainer`, `visualizer`, `graph-builder`
+* Параметризованное выполнение через Swagger
+* Управление очередью по `queue_id`
+* Поддержка команд через Kafka (`queue-control`, `queue-events`)
+* Поддержка метрик Prometheus
+* Встроенные конечные точки работоспособности `/health/live`, `/health/ready`, `/health/startup`
 
-## \[Environment Variables]
+## \[Переменные окружения]
 
-File `.env`:
+Файл `.env`:
 
 ```dotenv
 KAFKA_BOOTSTRAP_SERVERS=...
@@ -36,7 +36,7 @@ QUEUE_CONTROL_TOPIC=queue-control
 QUEUE_EVENTS_TOPIC=queue-events
 ```
 
-## \[Project Structure]
+## \[Структура проекта]
 
 ``` treeview
 queue-manager/
@@ -78,12 +78,12 @@ queue-manager/
 └── README.md
 ```
 
-## \[Example: Multiple Microservice Group Execution]
+## \[Пример: Выполнение группы из нескольких микросервисов]
 
-The service supports launching multiple microservices within a single queue request.
-Below are examples of valid payloads for different scenarios.
+Сервис поддерживает запуск нескольких микросервисов в рамках одного запроса очереди.
+Ниже приведены примеры допустимых полезных данных для различных сценариев.
 
-**Example 1 — Historical Data Processing Pipeline:**
+**Пример 1 — Конвейер обработки исторических данных:**
 
 ```json
 {
@@ -126,7 +126,7 @@ Below are examples of valid payloads for different scenarios.
 }
 ```
 
-**Example 2 — Real-Time Data Processing Pipeline:**
+**Пример 2 — Конвейер обработки данных в реальном времени:**
 
 ```json
 {
