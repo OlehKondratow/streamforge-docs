@@ -1,6 +1,7 @@
 +++
 date = '2025-08-26T01:30:37+02:00'
-draft = true
+draft = false
+weight = 89
 title = 'LinkedIN'
 +++
 

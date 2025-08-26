@@ -1,8 +1,8 @@
 +++
 date = '2025-08-26T01:30:31+02:00'
-draft = true
+draft = false
 title = "LinkedIN"
-weight = 18
+weight = 89
 +++
 
 ✍️ Олег Кондратов
