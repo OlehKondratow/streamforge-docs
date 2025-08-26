@@ -38,6 +38,26 @@ The StreamForge architecture is built on three fundamental principles that ensur
 #### **2.2. Architectural Diagram and Data Flow**
 
 The diagram below illustrates the interaction of key system components as part of a historical data loading task.
+```mermaid
+%% StreamForge — Data Lifecycle (fixed)
+%% Changes: safe labels, keep asterisk only inside node label
+flowchart LR
+    B[(Binance API)]:::ext --> LP[loader-producer]:::svc
+    QM[Queue Manager]:::svc --> K
+    LP --> K[[Kafka: market-candles-*]]:::topic
+    K --> AC[arango-connector]:::svc
+    A --> VIS[Visualizer UI]:::svc
+    K --> VIS
+    QM --> VIS
+    QM --> AC
+    QM --> LP
+    AC --> A[(ArangoDB)]:::core
+
+classDef svc fill:#2B90D9,stroke:#0E4F88,color:#FFFFFF
+classDef topic fill:#6B8E23,stroke:#2F4F2F,color:#FFFFFF
+classDef core fill:#333344,stroke:#9999AA,color:#FFFFFF
+classDef ext fill:#555555,stroke:#333333,color:#FFFFFF
+```
 
 ```mermaid
 graph TB
