@@ -1,7 +1,7 @@
 +++
 date = '2025-08-25T13:00:00+02:00'
 draft = false
-title = 'StreamForge Architectural Manifesto: Why We''re Betting Everything on Asynchronicity'
+title = 'StreamForge Architectural Manifesto: Why Were Betting Everything on Asynchronicity'
 weight = 55
 +++
 
