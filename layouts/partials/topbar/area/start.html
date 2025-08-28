@@ -1,7 +1,6 @@
-{{/* ваша кнопка Home (если нужна) */}}
+{{ partial "topbar/button/sidebar.html" (dict "page" .) }}
 {{ partial "topbar/button/home.html" (dict "page" .) }}
 
-{{/* стандартные кнопки темы — с нужным контекстом */}}
 {{ partial "topbar/button/toc.html"  (dict "page" . "onempty" "hide") }}
 {{ partial "topbar/button/prev.html" (dict "page" .) }}
 {{ partial "topbar/button/next.html" (dict "page" .) }}
