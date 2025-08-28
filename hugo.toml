@@ -69,24 +69,14 @@ enableRobotsTXT = true
     name  = "Oleh Kondratow"
     email = "box@okondratov.pl"
 
-[languages]
-  [languages.en]
-    languageName = "English"
-    weight = 1
-    title = "My Documentation"
-    contentDir = "content/en"
+[languages.en]
+  title = "StreamForge Docs"
 
-  [languages.pl]
-    languageName = "Polski"
-    weight = 2
-    title = "Moja Dokumentacja"
-    contentDir = "content/pl"
+[languages.ru]
+  title = "StreamForge Docs (RU)"
 
-  [languages.ru]
-    languageName = "Русский"
-    weight = 3
-    title = "Моя Документация"
-    contentDir = "content/ru"
+[languages.pl]
+  title = "StreamForge Docs (PL)"
 
   # Футер сайдбара: история, переключатель темы, языков
   [[params.sidebarfootermenus]]
