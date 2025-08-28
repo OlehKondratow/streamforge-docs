@@ -18,7 +18,7 @@ enableRobotsTXT = true
 [params]
  ordersectionsby = "weight" 
  showVisitedLinks = true
- disableLandingPageButton = true
+# disableLandingPageButton = true
  disableNextPrev = false
 
 # Текст/иконка Home для каждого языка (можно задать глобально в [params], но лучше языка-специфично)
