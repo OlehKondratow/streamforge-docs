@@ -18,16 +18,16 @@ enableRobotsTXT = true
 [params]
  ordersectionsby = "weight" 
  showVisitedLinks = true
-# disableLandingPageButton = true
+ disableLandingPageButton = False
  disableNextPrev = false
 
-# Текст/иконка Home для каждого языка (можно задать глобально в [params], но лучше языка-специфично)
-[languages.en.params]
-  landingPageName = '<i class="fa-fw fas fa-home"></i> Home'
-[languages.ru.params]
-  landingPageName = '<i class="fa-fw fas fa-home"></i> Домой'
-[languages.pl.params]
-  landingPageName = '<i class="fa-fw fas fa-home"></i> Start'
+  # Текст/иконка Home для каждого языка (можно задать глобально в [params], но лучше языка-специфично)
+  [languages.en.params]
+    landingPageName = '<i class="fa-fw fas fa-home"></i> Home'
+  [languages.ru.params]
+    landingPageName = '<i class="fa-fw fas fa-home"></i> Домой'
+  [languages.pl.params]
+    landingPageName = '<i class="fa-fw fas fa-home"></i> Start'
 
   [params.branding]
     logoLight = "images/sf-light.png"
@@ -69,14 +69,14 @@ enableRobotsTXT = true
     name  = "Oleh Kondratow"
     email = "box@okondratov.pl"
 
-[languages.en]
-  title = "StreamForge Docs"
+  [languages.en]
+    title = "StreamForge Docs"
 
-[languages.ru]
-  title = "StreamForge Docs (RU)"
+  [languages.ru]
+    title = "StreamForge Docs (RU)"
 
-[languages.pl]
-  title = "StreamForge Docs (PL)"
+  [languages.pl]
+    title = "StreamForge Docs (PL)"
 
   # Футер сайдбара: история, переключатель темы, языков
   [[params.sidebarfootermenus]]
