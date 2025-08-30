@@ -1,6 +1,8 @@
 +++
 title = "Kafka"
 weight = 12
+[params]
+  menuPre = '<i class="fa-fw fas fa-list-ol"></i> '
 +++
 # Terraform Code for Automated Deployment and Management of an Apache Kafka Cluster in Kubernetes using [Strimzi Kafka Operator](https://strimzi.io/).
 

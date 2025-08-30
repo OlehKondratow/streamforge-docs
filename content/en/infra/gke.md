@@ -1,7 +1,8 @@
 +++
-title = "Gke"
-type = "chapter"
+title = "Google Kubernetes Engine (GKE)"
 weight = 1
+[params]
+  menuPre = '<i class="fa-fw fas fa-cloud"></i> '
 +++
 
 ## Introduction
