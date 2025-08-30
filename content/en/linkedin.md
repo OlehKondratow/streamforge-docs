@@ -5,7 +5,6 @@ weight = 89
 title = '📌 REST APIs are the fastest way to build a distributed monolith.'
 [params]
   menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
-fab fa-linkedin
 +++
 
 ## 📌 REST APIs are the fastest way to build a distributed monolith.  
