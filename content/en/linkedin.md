@@ -2,7 +2,10 @@
 date = '2025-08-26T01:30:47+02:00'
 draft = false
 weight = 89
-title = 'LinkedIN'
+title = '📌 REST APIs are the fastest way to build a distributed monolith.'
+[params]
+  menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
+fab fa-linkedin
 +++
 
 ## 📌 REST APIs are the fastest way to build a distributed monolith.  
