@@ -1,7 +1,7 @@
 +++
 title = "Observability"
 type = "Centralized Logging Architecture in GKE Autopilot"
-weight = 3
+weight = 55
 [params]
   menuPre = '<i class="fa-fw fas fa-chart-line "></i> '
 +++

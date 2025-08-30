@@ -1,6 +1,6 @@
 +++
 title = "Google Kubernetes Engine (GKE)"
-weight = 1
+weight = 53
 [params]
   menuPre = '<i class="fa-fw fas fa-cloud"></i> '
 +++

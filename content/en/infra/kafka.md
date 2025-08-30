@@ -1,6 +1,6 @@
 +++
 title = "Kafka"
-weight = 12
+weight = 54
 [params]
   menuPre = '<i class="fa-fw fas fa-stream"></i> '
 +++
