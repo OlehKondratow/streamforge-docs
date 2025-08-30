@@ -1,6 +1,5 @@
 +++
 title = "Dummy Service"
-type = "chapter"
 weight = 60
 [params]
   menuPre = '<i class="fa-fw fas fa-ghost"></i> '
