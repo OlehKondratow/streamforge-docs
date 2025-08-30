@@ -2,6 +2,8 @@
 title = "Observability"
 type = "Centralized Logging Architecture in GKE Autopilot"
 weight = 3
+[params]
+  menuPre = '<i class="fa-fw fas fa-chart-line "></i> '
 +++
 
 This repository contains a complete set of artifacts for deploying a production-ready logging system for GKE Autopilot clusters using Google Cloud Logging and Cloud Monitoring.
