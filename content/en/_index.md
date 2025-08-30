@@ -2,7 +2,7 @@
 date = '2025-08-25T13:00:00+02:00'
 draft = false
 title = 'StreamForge Architectural Manifesto: Why We Bet Everything on Asynchronicity'
-weight = 1
+weight = 88
 layout = "redirect-to-first"
 +++
 

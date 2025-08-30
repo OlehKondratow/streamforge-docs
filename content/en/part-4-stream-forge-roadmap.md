@@ -1,11 +1,10 @@
 +++
 date = '2025-08-25T10:04:00+02:00'
 draft = false
-title = 'Appendices and Technical Details'
+icon: "article"
+title = 'Part IV'
 weight = 4
 +++
-
-# Part V: Appendices
 
 ### **Appendix A: Data Schemas and API**
 

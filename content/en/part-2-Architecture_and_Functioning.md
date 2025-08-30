@@ -1,11 +1,12 @@
 +++
 date = '2025-08-25T10:02:00+02:00'
 draft = false
-title = 'Infrastructure Platform and Technology Stack'
+icon: "article"
+title = 'Part II'
 weight = 2
 +++
 
-# Part III: Infrastructure Platform and Technology Stack
+# Infrastructure Platform and Technology Stack
 
 ### **Chapter 5: Platform Fundamentals: Kubernetes and Virtualization**
 
