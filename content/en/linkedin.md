@@ -34,7 +34,7 @@ We added more Parsers, but then Loader had to balance requests, retry, detect fa
 
 💡 These three moments convinced me: **synchronous design is a dead end in our domain**.  
 
-{{< figure src="images/stream-forge2.jpg" title="Архитектура StreamForge" >}}
+{{< figure src="images/stream-forge2.jpg" title="RestAPI - KAFKA" >}}
 ---
 
 ## Part 2. Why we bet on Kafka  
