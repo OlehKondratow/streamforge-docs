@@ -1,6 +1,8 @@
 +++
 title = "Arango Orderbook"
-weight = 1
+weight = 56
+[params]
+  menuPre = '<i class="fa-fw fas fa-database"></i> '
 +++
 
 A consumer microservice in the **StreamForge** ecosystem, designed for persisting order book data in ArangoDB.

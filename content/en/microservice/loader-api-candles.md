@@ -1,7 +1,8 @@
 +++
 title = "Loader Api Candles"
-type = "chapter"
-weight = 1
+weight = 63
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # `loader-api-candles`

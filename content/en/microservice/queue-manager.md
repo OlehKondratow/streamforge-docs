@@ -1,7 +1,8 @@
 +++
 title = "Queue Manager"
-type = "chapter"
-weight = 1
+weight = 69
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # \[Package] StreamForge Queue Manager

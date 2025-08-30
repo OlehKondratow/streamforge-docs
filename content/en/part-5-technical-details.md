@@ -5,15 +5,15 @@ title = 'Part V'
 weight = 5
 +++
 
-## Part V: Technical Details and Appendices
+# Technical Details and Appendices
 
 This section provides detailed technical specifications, configuration examples, and operational guides intended for an in-depth study of the StreamForge platform's architecture and implementation.
 
-### Appendix A: Data Schemas and API
+## Appendix A: Data Schemas and API
 
 This appendix provides the complete technical specification for the `queue-manager` API, including detailed JSON schemas for all message types exchanged via Apache Kafka. This information is essential for developers and system architects requiring a comprehensive understanding of the internal data structures and component interactions.
 
-### Appendix B: Kubernetes Manifest Examples
+## Appendix B: Kubernetes Manifest Examples
 
 This appendix contains example Kubernetes manifests that illustrate the deployment and configuration of various StreamForge components within the cluster.
 
@@ -53,7 +53,7 @@ spec:
   ttlSecondsAfterFinished: 3600
 ```
 
-### Appendix C: CI/CD Pipeline Details and Best Practices
+## Appendix C: CI/CD Pipeline Details and Best Practices
 
 This appendix details the standardized CI/CD processes implemented within the StreamForge platform, emphasizing the best practices applied for efficient and consistent microservice development, building, and deployment.
 
@@ -70,11 +70,11 @@ This appendix details the standardized CI/CD processes implemented within the St
 *   **Modular CI/CD Configuration:** The CI/CD configuration is structured with common templates (e.g., `.build_python_service` in `.gitlab/ci-templates/Python-Service.gitlab-ci.yml`) that are extended by specific pipelines for each microservice. This modularity promotes reusability, simplifies maintenance, and ensures consistent application of CI/CD best practices across the platform.
 
 
-### Appendix D: Glossary of Terms
+## Appendix D: Glossary of Terms
 
 This glossary provides definitions for key terms and concepts used throughout the StreamForge documentation, including terms such as Workflow, Job, Decoupling, and Idempotence, to ensure a consistent and technically accurate understanding.
 
-### Appendix E: Deployment and Operations Guide
+## Appendix E: Deployment and Operations Guide
 
 This guide contains step-by-step instructions for deploying the StreamForge platform from scratch, along with best-practice recommendations for monitoring, backup procedures, and system updates, ensuring comprehensive lifecycle management.
 

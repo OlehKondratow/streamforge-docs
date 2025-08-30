@@ -1,7 +1,8 @@
 +++
 title = "Loader Producer"
-type = "chapter"
-weight = 1
+weight = 65
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 # loader-producer
 

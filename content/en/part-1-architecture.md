@@ -5,7 +5,7 @@ title = 'Part I'
 weight = 1
 +++
 
-# Part II: StreamForge Application Architecture
+# StreamForge Application Architecture
 
 ### Service Status
 

@@ -5,7 +5,7 @@ title = 'Part III'
 weight = 3
 +++
 
-# Part III: Platform Development Roadmap (SRE & DevOps)
+# Platform Development Roadmap (SRE & DevOps)
 
 The current StreamForge architecture is a solid foundation for implementing advanced SRE (Site Reliability Engineering) and DevOps practices. This section describes the plan to transform the platform into a truly self-healing and antifragile system.
 

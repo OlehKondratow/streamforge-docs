@@ -1,6 +1,8 @@
 +++
 title = "Arango Connector"
-weight = 1
+weight = 54
+[params]
+  menuPre = '<i class="fa-fw fas fa-database"></i> '
 +++
 
 A consumer microservice in the **StreamForge** ecosystem, designed for universal data persistence into ArangoDB.

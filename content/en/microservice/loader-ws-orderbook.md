@@ -1,7 +1,8 @@
 +++
 title = "Loader Ws Orderbook"
-type = "chapter"
-weight = 1
+weight = 67
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # loader-ws-orderbook

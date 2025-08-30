@@ -1,7 +1,8 @@
 +++
 title = "Loader Api Trades"
-type = "chapter"
-weight = 1
+weight = 64
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # `loader-api-trades`

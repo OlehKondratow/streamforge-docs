@@ -1,7 +1,8 @@
 +++
 title = "Loader Ws Candles"
-type = "chapter"
-weight = 1
+weight = 66
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # `loader-ws-candles`

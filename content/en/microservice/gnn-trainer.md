@@ -1,7 +1,8 @@
 +++
 title = "Gnn Trainer"
-type = "chapter"
-weight = 1
+weight = 61
+[params]
+  menuPre = '<i class="fa-fw fas fa-share-alt"></i> '
 +++
 
 # `gnn-trainer`

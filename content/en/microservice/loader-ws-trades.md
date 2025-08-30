@@ -1,7 +1,8 @@
 +++
 title = "Loader Ws Trades"
-type = "chapter"
-weight = 1
+weight = 68
+[params]
+  menuPre = '<i class="fa-fw fas fa-exchange-alt"></i> '
 +++
 
 # loader-ws-trades

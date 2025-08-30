@@ -1,6 +1,8 @@
 +++
 title = "Arango Trades"
-weight = 1
+weight = 57
+[params]
+  menuPre = '<i class="fa-fw fas fa-database"></i> '
 +++
 
 A consumer microservice in the **StreamForge** ecosystem, designed for persisting trade data in ArangoDB.

@@ -1,6 +1,8 @@
 +++
 title = "Arango Candles"
-weight = 1
+weight = 53
+[params]
+  menuPre = '<i class="fa-fw fas fa-database"></i> '
 +++
 
 A consumer microservice in the **StreamForge** ecosystem.

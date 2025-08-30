@@ -1,6 +1,8 @@
 +++
 title = "Arango Graph Prep"
-weight = 1
+weight = 55
+[params]
+  menuPre = '<i class="fa-fw fas fa-database"></i> '
 +++
 
 A microservice in the **StreamForge** ecosystem, designed for preparing data for graph construction and storing it in ArangoDB.

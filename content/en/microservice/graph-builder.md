@@ -1,7 +1,8 @@
 +++
 title = "Graph Builder"
-type = "chapter"
-weight = 1
+weight = 62
+[params]
+  menuPre = '<i class="fa-fw fas fa-share-alt"></i> '
 +++
 
 # `graph-build`
