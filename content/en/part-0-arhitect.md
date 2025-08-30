@@ -25,7 +25,7 @@ The crypto market is a perfect storm: 24/7 volatility, huge volumes of data, and
 
 3.  **The Scaling Problem:** How do you scale such a system? If the `parser` becomes a bottleneck, we can run 10 instances of it. But now the `loader` needs to know how to balance the load between them? And what if one of the `parser`s dies? The `loader` must implement retry logic and switch to a live instance. We start duplicating complex fault tolerance logic in every service.
 
-{{< figure src="images/stream-forge2.jpg" title="RestAPI - KAFKA" >}}
+{{< figure src="images/stream-forge4.webp" title="RestAPI - KAFKA" >}}
 
 ---
 
