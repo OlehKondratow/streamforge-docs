@@ -7,8 +7,6 @@ title = '📌 Od kruchego REST do stabilnego Data Mesh: nasza strategiczna decyz
   menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
 +++
 
-# 📌 Od kruchego REST do stabilnego Data Mesh: nasza strategiczna decyzja o Kafka.
-
 ✍️ Oleh Kondratov  
 25 sierpnia 2025  
 
