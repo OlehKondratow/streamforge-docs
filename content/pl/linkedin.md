@@ -1,11 +1,13 @@
 +++
-date = '2025-08-26T01:30:37+02:00'
+date = '2025-08-26T01:30:47+02:00'
 draft = false
 weight = 89
-title = 'LinkedIN'
+title = '📌 Od kruchego REST do stabilnego Data Mesh: nasza strategiczna decyzja o Kafka.'
+[params]
+  menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
 +++
 
-# 📌 Od kruchego REST do stabilnego Data Mesh: nasza strategiczna decyzja o Kafka (PL)
+# 📌 Od kruchego REST do stabilnego Data Mesh: nasza strategiczna decyzja o Kafka.
 
 ✍️ Oleh Kondratov  
 25 sierpnia 2025  
@@ -38,6 +40,7 @@ Dodaliśmy Parsery, ale Loader musiał sam równoważyć ruch, robić retry, obs
 
 💡 Te trzy przypadki przekonały mnie: **synchronizacja w tym domenie to ślepy zaułek**.  
 
+{{< figure src="images/stream-forge2.jpg" title="RestAPI - KAFKA" >}}
 ---
 
 ## Część 2. Dlaczego wybraliśmy Kafka  
@@ -92,10 +95,9 @@ I jest **żelbetowy**.
 ---
 
   **Więcej**  
-- Dokumentacja: [docs.streamforge.dev](http://docs.streamforge.dev)  
-- GitHub: [github.com/0leh-kondratov/stream-forge](https://github.com/0leh-kondratov/stream-forge)  
+- {{% icon "fab fa-linkedin" %}} Dokumentacja: [docs.streamforge.dev](http://docs.streamforge.dev)  
+- {{% icon "fab fa-github" %}} GitHub: [github.com/0leh-kondratov/stream-forge](https://github.com/0leh-kondratov/stream-forge)  
 
----
 
 👉 Pytanie: jak wasza firma radzi sobie z kruchością synchronicznych mikrousług?  
 
