@@ -89,8 +89,8 @@ And it is **concrete-solid**.
 ---
 
   **Resources**  
-- Documentation: [docs.streamforge.dev](http://docs.streamforge.dev)  
-- GitHub: [github.com/0leh-kondratov/stream-forge](https://github.com/0leh-kondratov/stream-forge)  
+- {{% icon "fab fa-linkedin" %}} Documentation: [docs.streamforge.dev](http://docs.streamforge.dev)  
+- {{% icon "fab fa-github" %}} GitHub: [github.com/0leh-kondratov/stream-forge](https://github.com/0leh-kondratov/stream-forge)  
 
 ---
 
