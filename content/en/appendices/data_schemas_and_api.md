@@ -1,7 +1,8 @@
 +++
 title = "Data Schemas and API"
-type = "chapter"
 weight = 1
+[params]
+  menuPre = '<i class="fa-fw fas fa-table"></i> '
 +++
 
 #  Queue Manager – Data Schemas & API Reference

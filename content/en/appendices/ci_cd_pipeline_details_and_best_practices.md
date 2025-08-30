@@ -1,6 +1,8 @@
 +++
 title = "CI/CD Pipeline Details and Best Practices"
 weight = 2
+[params]
+  menuPre = '<i class="fa-fw fas fa-project-diagram"></i> '
 +++
 
 This document provides a comprehensive overview of the CI/CD pipelines implemented in this project for both GitLab and GitHub. It details the structure, stages, and jobs, along with best practices for maintaining and extending the pipelines.

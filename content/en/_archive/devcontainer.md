@@ -1,7 +1,6 @@
 +++
 title = "Devcontainer"
-type = "chapter"
-draft = false
+draft = true
 weight = 1
 +++
 

@@ -1,8 +1,7 @@
 +++
 title = "Observability"
-type = "chapter"
-draft = false
-weight = 1
+draft = true
+weight = 2
 +++
 
 # Centralized Logging Architecture in GKE Autopilot

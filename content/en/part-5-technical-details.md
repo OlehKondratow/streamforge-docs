@@ -156,4 +156,3 @@ For in-cluster debugging and interactive sessions, StreamForge leverages the fol
 
 *   **General-Purpose Debug Container:** A general-purpose Docker image is maintained, containing a wide range of tools (`kubectl`, `helm`, `kafkacat`, `python`). This image can be deployed as an ephemeral pod (`kubectl run -it ...`) for interactive debugging and administrative tasks directly within the cluster.
 
-```

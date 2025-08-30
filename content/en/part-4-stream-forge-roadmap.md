@@ -5,13 +5,13 @@ title = 'Part IV'
 weight = 4
 +++
 
-### **Appendix A: Data Schemas and API**
+## **Appendix A: Data Schemas and API**
 
 *(This section will contain the full OpenAPI specification for `queue-manager`, as well as detailed JSON schemas for all messages transmitted via Kafka.)*
 
-### **Appendix B: Kubernetes Manifest Examples**
+## **Appendix B: Kubernetes Manifest Examples**
 
-#### **Example: Kubernetes Job for `arango-candles`**
+### **Example: Kubernetes Job for `arango-candles`**
 
 ```yaml
 apiVersion: batch/v1
@@ -47,19 +47,19 @@ spec:
   ttlSecondsAfterFinished: 3600
 ```
 
-### **Appendix C: CI/CD Pipeline Examples**
+## **Appendix C: CI/CD Pipeline Examples**
 
 *(This section will contain the full `.gitlab-ci.yml` files for each microservice, demonstrating the testing, build, and deployment stages.)*
 
-### **Appendix D: Glossary of Terms**
+## **Appendix D: Glossary of Terms**
 
 *(This section will contain definitions of key terms used in the project: Workflow, Job, Decoupling, Idempotency, etc.)*
 
-### **Appendix E: Deployment and Operations Guide**
+## **Appendix E: Deployment and Operations Guide**
 
 *(This section will contain step-by-step instructions for deploying the entire platform from scratch, as well as a guide to basic operational procedures: monitoring, backups, component updates.)*
 
-### **Appendix F: Module Descriptions**
+## **Appendix F: Module Descriptions**
 
 *   **core-modules/argocd/**: Manages the deployment of ArgoCD, a GitOps tool that provides declarative and continuous deployment of applications in Kubernetes.
 *   **core-modules/cert-manager/**: Responsible for automating the management of TLS certificates in Kubernetes, including their issuance and rotation.
@@ -80,7 +80,7 @@ spec:
 *   **core-modules/kubernetes/**: Contains basic configuration files for setting up a Kubernetes cluster.
 *   **core-modules/metallb/**: Provides a LoadBalancer implementation for bare-metal Kubernetes clusters.
 
-### **Appendix G: Testing Procedure**
+## **Appendix G: Testing Procedure**
 
 `dummy-service` and `debug_producer.py` are used to test the system's functionality and the end-to-end flow of commands and events through Kafka. These tools are particularly effective in a standardized `devcontainer` development environment.
 
@@ -132,7 +132,7 @@ spec:
 
 The `devcontainer` environment provides a standardized and isolated environment that mimics a production environment (with access to Kubernetes, Kafka, etc.). This makes the tests performed in the `devcontainer` particularly valuable, as they are as close as possible to real deployment conditions. It is recommended to perform all the tests described above in this environment.
 
-### **Appendix H: Kafka Resource Management**
+## **Appendix H: Kafka Resource Management**
 
 The `cred-kafka-yaml/` directory contains Kubernetes manifests for declarative management of Kafka resources using the Strimzi operator. These manifests include:
 
