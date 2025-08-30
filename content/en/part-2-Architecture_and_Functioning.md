@@ -1,7 +1,6 @@
 +++
 date = '2025-08-25T10:02:00+02:00'
 draft = false
-icon: "article"
 title = 'Part II'
 weight = 2
 +++
