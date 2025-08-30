@@ -7,7 +7,6 @@ title = '📌 REST APIs are the fastest way to build a distributed monolith.'
   menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
 +++
 
-## 📌 REST APIs are the fastest way to build a distributed monolith.  
 We learned it the hard way while building **StreamForge — a real-time crypto trading platform**.  
 
 That’s why we killed REST in favor of **100% event-driven architecture with Kafka**.  
