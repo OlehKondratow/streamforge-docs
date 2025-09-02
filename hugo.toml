@@ -6,7 +6,6 @@ defaultContentLanguageInSubdir = true
 enableGitInfo = true
 enableEmoji = true
 enableRobotsTXT = true
-theme = 'neon'
 
 [module]
 
