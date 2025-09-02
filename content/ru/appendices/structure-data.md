@@ -235,11 +235,13 @@ FOR h IN heatmap_trades_1m
 - Рёбра: `candle→level`, `level→heatbin`, (опц. `candle→candle` по времени)
 
 ```mermaid
+
 graph TD
   C1[(candle@t)] --> Lx[(level)]
   C2[(candle@t+1)] --> Lx
   Lx --> HB1[(heatbin p1)]
   Lx --> HB2[(heatbin p2)]
+
 ```
 
 #### AQL-шаблоны Рёбер:

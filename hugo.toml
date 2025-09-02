@@ -6,6 +6,7 @@ defaultContentLanguageInSubdir = true
 enableGitInfo = true
 enableEmoji = true
 enableRobotsTXT = true
+theme = 'neon'
 
 [module]
 
@@ -16,6 +17,7 @@ enableRobotsTXT = true
     path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
 [params]
+  theme = "neon"
   ordersectionsby = "weight"
   showVisitedLinks = true
   disableLandingPageButton = false
