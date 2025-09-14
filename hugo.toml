@@ -21,6 +21,7 @@ enableRobotsTXT = true
   showVisitedLinks = true
   disableLandingPageButton = false
   disableNextPrev = false
+  math = true
 
   [params.branding]
     logoLight = "images/sf-light.png"
