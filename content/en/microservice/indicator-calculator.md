@@ -1,3 +1,8 @@
++++
+title = "indicator-calculator"
+weight = 71
++++
+
 1. **FGI and Support/Resistance**
 
    * **FGI (Fear & Greed Index)** is not a purely technical indicator, but a "meta-assessment" of sentiment. In a simplified version, it can be calculated as a function of volatility, volumes, and distance to levels:
