@@ -1,6 +1,8 @@
 +++
 title = "indicator-calculator"
 weight = 71
+[params]
+  menuPre = '<i class="fa-fw fas fa-chart-pie"></i> '
 +++
 
 1. **FGI and Support/Resistance**

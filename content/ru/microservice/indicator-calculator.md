@@ -1,6 +1,8 @@
 +++
 title = "indicator-calculator"
 weight = 13
+[params]
+  menuPre = '<i class="fa-fw fas fa-chart-pie"></i>'
 +++
 
 ## 🔹 **1. RSI (Relative Strength Index)**

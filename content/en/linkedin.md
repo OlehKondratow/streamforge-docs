@@ -2,7 +2,7 @@
 date = '2025-08-26T01:30:47+02:00'
 draft = false
 weight = 89
-title = '📌 REST APIs are the fastest way to build a distributed monolith.'
+title = '📌 Scaffolding StreamForge: Why We Tore  REST for a Kafka Foundation.'
 [params]
   menuPre = '<i class="fa-fw fab fa-linkedin"></i> '
 +++
@@ -34,7 +34,7 @@ We added more Parsers, but then Loader had to balance requests, retry, detect fa
 
 💡 These three moments convinced me: **synchronous design is a dead end in our domain**.  
 
-{{< figure src="images/stream-forge10.png" title="RestAPI - KAFKA" >}}
+{{< figure src="images/headmap.png" title="HeadMap" >}}
 ---
 
 ## Part 2. Why we bet on Kafka  
